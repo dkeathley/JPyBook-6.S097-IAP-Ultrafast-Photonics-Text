@@ -1,4 +1,4 @@
-# 6.S097 -- IAP 2023 -- Ultrafast Photonics
+# 6.S097 -- Ultrafast Photonics (IAP 2023)
 
 This is the course website for 2023 IAP course 6.S097 -- Ultrafast Photonics.  
 
