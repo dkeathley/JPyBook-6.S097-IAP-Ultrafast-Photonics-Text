@@ -8,8 +8,8 @@ logo: logo.png
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: off
-  timeout: 100
+  execute_notebooks: 'off'
+  timeout: 10
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -28,7 +28,7 @@ html:
 
 # Information about where the book exists on the web
 repository:
-  url                       : https://github.com/dkeathley/JPyBOOK-basics-of-ultrafast-optics-w-computational-examples  # Online location of your book
+  url                       : https://github.com/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics  # Online location of your book
   branch                    : main  # Which branch of the repository should be used when creating links (optional)
   
 launch_buttons:
