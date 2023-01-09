@@ -55,6 +55,11 @@ Another excellent book you can use to compliment this material is [Andrew Weiner
 
 Finally, you will have access through the UC Davis Canvas website for their winter quarter course on Ultrafast Photonics.  We will move at an accelerated pace, but you are encouraged to look ahead at leacture material and past lectures to provide further context and extended information about particular topics presented in this IAP course.  
 
+## Problem Sets
+
+There will be three problem sets.  
+
+The problem sets will be uploaded and graded on [Canvas](https://canvas.mit.edu/courses/20238).  
 
 ## Course Credit
 
