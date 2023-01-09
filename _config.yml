@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Basics of Ultrafast Optics with Computational Examples
+title: 6.S097 Ultrafast Photonics (IAP 2023)
 author: P. Donald Keathley, William P. Putnam
 logo: logo.png
 
@@ -9,7 +9,7 @@ logo: logo.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: auto
-  timeout: 500
+  timeout: 100
 
 # Define the name of the latex output file for PDF builds
 latex:
