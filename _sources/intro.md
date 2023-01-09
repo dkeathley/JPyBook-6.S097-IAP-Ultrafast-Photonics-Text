@@ -13,26 +13,26 @@ This course is designed to overlap and coordinate with an ultrafast photonics co
 The course is structured into five chapters the content of which will be presented over eight lectures. The chapters and lectures will be organized as follows.
 
  - **Chapter 1 (Lecture 1):**  Introduction
-  - Introduction to the course
-  - Notation
-  - Quantifying ultrafast pulses
-  - Time-frequency relations
-  - Core principles of ultrafast pulse formation
+     - Introduction to the course
+     - Notation
+     - Quantifying ultrafast pulses
+     - Time-frequency relations
+     - Core principles of ultrafast pulse formation
  - **Chapter 2 (Lectures 2 and 3):** Pulse Interaction with Linear Media
-  - Reflection and transmission elements
-  - Cavities
-  - Propagation in dispersive media (pulse stretching and compression)
+    - Reflection and transmission elements
+    - Cavities
+    - Propagation in dispersive media (pulse stretching and compression)
  - **Chapter 3 (Lectures 4 and 5):** Nonlinear Pulse Propagation
-  - Self-phase modulation
-  - Soliton formation
-  - Supercontinuum generation
-  - Modeling a nonlinear photonic switch
+    - Self-phase modulation
+    - Soliton formation
+    - Supercontinuum generation
+    - Modeling a nonlinear photonic switch
  - **Chapter 4 (Lecture 6):** Modelocking (Active and Passive)
  - **Chapter 5 (Lectures 7 and 8):** Dispersion Management and Pulse Characterization 
-  - Pulse compression schemes
-  - Autocorrelation 
-  - Phase characterization
-  - EO sampling
+    - Pulse compression schemes
+    - Autocorrelation 
+    - Phase characterization
+    - EO sampling
 
 
 ## Course Credit
