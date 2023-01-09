@@ -1,4 +1,15 @@
 Traceback (most recent call last):
+  File "/home/dkeathley/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 730, in _async_poll_for_reply
+    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
+  File "/home/dkeathley/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 96, in ensure_async
+    result = await obj
+  File "/home/dkeathley/anaconda3/lib/python3.8/site-packages/jupyter_client/channels.py", line 230, in get_msg
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/home/dkeathley/anaconda3/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
     executenb(
   File "/home/dkeathley/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 1204, in execute
@@ -11,210 +22,18 @@ Traceback (most recent call last):
     return future.result()
   File "/home/dkeathley/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "/home/dkeathley/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 965, in async_execute_cell
-    await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/home/dkeathley/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
-    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
-nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
-------------------
-fig = plt.figure()
-fig.set_size_inches(25, 5)
-
-ax_amp = fig.add_subplot(1, 4, 1)
-markerline, stemlines, baseline = ax_amp.stem(np.fft.fftshift(f), 
-                                              (np.fft.fftshift((np.abs(np.fft.fft(np.fft.fftshift(A[0, :])))))),
-                                             use_line_collection=True)
-ax_amp.set_xlim(-50, 50)
-
-N_plot = 30
-frange = np.where(np.abs(f)  <= N_plot)
-ax_phase = fig.add_subplot(1, 4, 2)
-markerline_phase, stemline_phase, baseline_phase = ax_phase.stem(np.fft.fftshift(f[frange[0]]), 
-                                                                 (np.fft.fftshift((np.angle(np.fft.fft(np.fft.fftshift(A[0, :]))))[frange[0]])),
-                                                                use_line_collection=True)
-ax_phase.set_xlim(-N_plot, N_plot)
-ax_phase.set_ylim(-np.pi, np.pi)
-
-
-ax_time = fig.add_subplot(1, 4, 3)
-line, = ax_time.plot(t, np.abs(A[0, :])**2, '-', linewidth=2.5)
-ax_time.set_xlim(-.1, 0.1)
-
-ax_gain = fig.add_subplot(1, 4, 4)
-line_gain, = ax_gain.plot(0, g[0], 'o-', color='tab:red')
-ax_gain.set_xlim(0, 99)
-ax_gain.set_xlabel('Round Trip')
-ax_gain.set_ylabel('Gain, g')
-
-N = 100
-bottom=0
-def updatefig(i):
-    ax_amp.cla()
-    markerline, stemlines, baseline = ax_amp.stem(np.fft.fftshift(f), 
-                                                  (np.fft.fftshift((np.abs(np.fft.fft(np.fft.fftshift(A[i, :])))))),
-                                                 use_line_collection=True)
-    ax_amp.set_xlim(-100, 100)
-    ax_amp.set_xlabel('frequency')
-    ax_amp.set_ylabel('intensity')
-    
-    ax_phase.cla()
-    markerline_phase, stemline_phase, baseline_phase = ax_phase.stem(np.fft.fftshift(f[frange[0]]), 
-                                                                     (np.fft.fftshift((np.angle(np.fft.fft(np.fft.fftshift(A[i, :]))))[frange[0]])),
-                                                                    use_line_collection=True)
-    ax_phase.set_xlim(-N_plot, N_plot)
-    ax_phase.set_ylim(-np.pi, np.pi)
-    ax_phase.set_title(str(int(i*N_save)) + ' Round Trips', fontsize=13)
-    ax_phase.set_xlabel('frequency')
-    ax_phase.set_ylabel('intensity')
-    
-    ax_time.cla()
-    line, = ax_time.plot(t, np.abs(A[i, :])**2, '-', linewidth=2.5)
-    ax_time.set_xlim(-0.1, 0.1)
-    ax_time.set_xlabel('time')
-    ax_time.set_ylabel('intensity')
-    
-    ax_gain.cla()
-    line_gain, = ax_gain.plot(range(0,i), g[0:i], 'o-', color='tab:red')
-    ax_gain.set_xlim(0, 99)
-    ax_gain.set_ylim(0.0, 1.05*np.max(g))
-    ax_gain.set_xlabel('Round Trip')
-    ax_gain.set_ylabel('Gain, g')
-    
-    return markerline, stemlines, baseline, markerline_phase, stemline_phase, baseline_phase, line, line_gain
-
-#Setup the animation
-ani = animation.FuncAnimation(fig, updatefig, interval=N, blit=True)
-
-#Convert to javascript html movie
-HTML(ani.to_jshtml())
-------------------
-
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mKeyboardInterrupt[0m                         Traceback (most recent call last)
-[0;32m/tmp/ipykernel_3924926/1087445744.py[0m in [0;36m<cell line: 70>[0;34m()[0m
-[1;32m     68[0m [0;34m[0m[0m
-[1;32m     69[0m [0;31m#Convert to javascript html movie[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 70[0;31m [0mHTML[0m[0;34m([0m[0mani[0m[0;34m.[0m[0mto_jshtml[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/animation.py[0m in [0;36mto_jshtml[0;34m(self, fps, embed_frames, default_mode)[0m
-[1;32m   1327[0m                                     [0membed_frames[0m[0;34m=[0m[0membed_frames[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1328[0m                                     default_mode=default_mode)
-[0;32m-> 1329[0;31m                 [0mself[0m[0;34m.[0m[0msave[0m[0;34m([0m[0mstr[0m[0;34m([0m[0mpath[0m[0;34m)[0m[0;34m,[0m [0mwriter[0m[0;34m=[0m[0mwriter[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1330[0m                 [0mself[0m[0;34m.[0m[0m_html_representation[0m [0;34m=[0m [0mpath[0m[0;34m.[0m[0mread_text[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1331[0m [0;34m[0m[0m
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/animation.py[0m in [0;36msave[0;34m(self, filename, writer, fps, dpi, codec, bitrate, extra_args, metadata, extra_anim, savefig_kwargs, progress_callback)[0m
-[1;32m   1079[0m                 [0;32mfor[0m [0manim[0m[0;34m,[0m [0md[0m [0;32min[0m [0mzip[0m[0;34m([0m[0mall_anim[0m[0;34m,[0m [0mdata[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1080[0m                     [0;31m# TODO: See if turning off blit is really necessary[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1081[0;31m                     [0manim[0m[0;34m.[0m[0m_draw_next_frame[0m[0;34m([0m[0md[0m[0;34m,[0m [0mblit[0m[0;34m=[0m[0;32mFalse[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1082[0m                     [0;32mif[0m [0mprogress_callback[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1083[0m                         [0mprogress_callback[0m[0;34m([0m[0mframe_number[0m[0;34m,[0m [0mtotal_frames[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/animation.py[0m in [0;36m_draw_next_frame[0;34m(self, framedata, blit)[0m
-[1;32m   1114[0m         [0;31m# post- draw, as well as the drawing of the frame itself.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1115[0m         [0mself[0m[0;34m.[0m[0m_pre_draw[0m[0;34m([0m[0mframedata[0m[0;34m,[0m [0mblit[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1116[0;31m         [0mself[0m[0;34m.[0m[0m_draw_frame[0m[0;34m([0m[0mframedata[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1117[0m         [0mself[0m[0;34m.[0m[0m_post_draw[0m[0;34m([0m[0mframedata[0m[0;34m,[0m [0mblit[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1118[0m [0;34m[0m[0m
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/animation.py[0m in [0;36m_draw_frame[0;34m(self, framedata)[0m
-[1;32m   1741[0m         [0;31m# Call the func with framedata and args. If blitting is desired,[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1742[0m         [0;31m# func needs to return a sequence of any artists that were modified.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1743[0;31m         [0mself[0m[0;34m.[0m[0m_drawn_artists[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_func[0m[0;34m([0m[0mframedata[0m[0;34m,[0m [0;34m*[0m[0mself[0m[0;34m.[0m[0m_args[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1744[0m [0;34m[0m[0m
-[1;32m   1745[0m         [0;32mif[0m [0mself[0m[0;34m.[0m[0m_blit[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/tmp/ipykernel_3924926/1087445744.py[0m in [0;36mupdatefig[0;34m(i)[0m
-[1;32m     32[0m [0;32mdef[0m [0mupdatefig[0m[0;34m([0m[0mi[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     33[0m     [0max_amp[0m[0;34m.[0m[0mcla[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 34[0;31m     markerline, stemlines, baseline = ax_amp.stem(np.fft.fftshift(f), 
-[0m[1;32m     35[0m                                                   [0;34m([0m[0mnp[0m[0;34m.[0m[0mfft[0m[0;34m.[0m[0mfftshift[0m[0;34m([0m[0;34m([0m[0mnp[0m[0;34m.[0m[0mabs[0m[0;34m([0m[0mnp[0m[0;34m.[0m[0mfft[0m[0;34m.[0m[0mfft[0m[0;34m([0m[0mnp[0m[0;34m.[0m[0mfft[0m[0;34m.[0m[0mfftshift[0m[0;34m([0m[0mA[0m[0;34m[[0m[0mi[0m[0;34m,[0m [0;34m:[0m[0;34m][0m[0;34m)[0m[0;34m)[0m[0;34m)[0m[0;34m)[0m[0;34m)[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     36[0m                                                  use_line_collection=True)
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/__init__.py[0m in [0;36minner[0;34m(ax, data, *args, **kwargs)[0m
-[1;32m   1421[0m     [0;32mdef[0m [0minner[0m[0;34m([0m[0max[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0mdata[0m[0;34m=[0m[0;32mNone[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1422[0m         [0;32mif[0m [0mdata[0m [0;32mis[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1423[0;31m             [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0max[0m[0;34m,[0m [0;34m*[0m[0mmap[0m[0;34m([0m[0msanitize_sequence[0m[0;34m,[0m [0margs[0m[0;34m)[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1424[0m [0;34m[0m[0m
-[1;32m   1425[0m         [0mbound[0m [0;34m=[0m [0mnew_sig[0m[0;34m.[0m[0mbind[0m[0;34m([0m[0max[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/_api/deprecation.py[0m in [0;36mwrapper[0;34m(*inner_args, **inner_kwargs)[0m
-[1;32m    408[0m                          [0;32melse[0m [0mdeprecation_addendum[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    409[0m                 **kwargs)
-[0;32m--> 410[0;31m         [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0minner_args[0m[0;34m,[0m [0;34m**[0m[0minner_kwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    411[0m [0;34m[0m[0m
-[1;32m    412[0m     [0mDECORATORS[0m[0;34m[[0m[0mwrapper[0m[0;34m][0m [0;34m=[0m [0mdecorator[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/axes/_axes.py[0m in [0;36mstem[0;34m(self, linefmt, markerfmt, basefmt, bottom, label, use_line_collection, orientation, *args)[0m
-[1;32m   3000[0m                 [0mlinestyle[0m [0;34m=[0m [0mmpl[0m[0;34m.[0m[0mrcParams[0m[0;34m[[0m[0;34m'lines.linestyle'[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3001[0m             [0mxlines[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mvlines[0m [0;32mif[0m [0morientation[0m [0;34m==[0m [0;34m"vertical"[0m [0;32melse[0m [0mself[0m[0;34m.[0m[0mhlines[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 3002[0;31m             stemlines = xlines(
-[0m[1;32m   3003[0m                 [0mlocs[0m[0;34m,[0m [0mbottom[0m[0;34m,[0m [0mheads[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3004[0m                 colors=linecolor, linestyles=linestyle, label="_nolegend_")
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/__init__.py[0m in [0;36minner[0;34m(ax, data, *args, **kwargs)[0m
-[1;32m   1421[0m     [0;32mdef[0m [0minner[0m[0;34m([0m[0max[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0mdata[0m[0;34m=[0m[0;32mNone[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1422[0m         [0;32mif[0m [0mdata[0m [0;32mis[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1423[0;31m             [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0max[0m[0;34m,[0m [0;34m*[0m[0mmap[0m[0;34m([0m[0msanitize_sequence[0m[0;34m,[0m [0margs[0m[0;34m)[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1424[0m [0;34m[0m[0m
-[1;32m   1425[0m         [0mbound[0m [0;34m=[0m [0mnew_sig[0m[0;34m.[0m[0mbind[0m[0;34m([0m[0max[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/axes/_axes.py[0m in [0;36mvlines[0;34m(self, x, ymin, ymax, colors, linestyles, label, **kwargs)[0m
-[1;32m   1161[0m         [0mmasked_verts[0m[0;34m[[0m[0;34m:[0m[0;34m,[0m [0;36m1[0m[0;34m,[0m [0;36m1[0m[0;34m][0m [0;34m=[0m [0mymax[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1162[0m [0;34m[0m[0m
-[0;32m-> 1163[0;31m         lines = mcoll.LineCollection(masked_verts, colors=colors,
-[0m[1;32m   1164[0m                                      linestyles=linestyles, label=label)
-[1;32m   1165[0m         [0mself[0m[0;34m.[0m[0madd_collection[0m[0;34m([0m[0mlines[0m[0;34m,[0m [0mautolim[0m[0;34m=[0m[0;32mFalse[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/collections.py[0m in [0;36m__init__[0;34m(self, segments, zorder, **kwargs)[0m
-[1;32m   1412[0m             [0mzorder[0m[0;34m=[0m[0mzorder[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1413[0m             **kwargs)
-[0;32m-> 1414[0;31m         [0mself[0m[0;34m.[0m[0mset_segments[0m[0;34m([0m[0msegments[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1415[0m [0;34m[0m[0m
-[1;32m   1416[0m     [0;32mdef[0m [0mset_segments[0m[0;34m([0m[0mself[0m[0;34m,[0m [0msegments[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/collections.py[0m in [0;36mset_segments[0;34m(self, segments)[0m
-[1;32m   1418[0m             [0;32mreturn[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1419[0m [0;34m[0m[0m
-[0;32m-> 1420[0;31m         self._paths = [mpath.Path(seg) if isinstance(seg, np.ma.MaskedArray)
-[0m[1;32m   1421[0m                        [0;32melse[0m [0mmpath[0m[0;34m.[0m[0mPath[0m[0;34m([0m[0mnp[0m[0;34m.[0m[0masarray[0m[0;34m([0m[0mseg[0m[0;34m,[0m [0mfloat[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1422[0m                        for seg in segments]
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/collections.py[0m in [0;36m<listcomp>[0;34m(.0)[0m
-[1;32m   1418[0m             [0;32mreturn[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1419[0m [0;34m[0m[0m
-[0;32m-> 1420[0;31m         self._paths = [mpath.Path(seg) if isinstance(seg, np.ma.MaskedArray)
-[0m[1;32m   1421[0m                        [0;32melse[0m [0mmpath[0m[0;34m.[0m[0mPath[0m[0;34m([0m[0mnp[0m[0;34m.[0m[0masarray[0m[0;34m([0m[0mseg[0m[0;34m,[0m [0mfloat[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1422[0m                        for seg in segments]
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/path.py[0m in [0;36m__init__[0;34m(self, vertices, codes, _interpolation_steps, closed, readonly)[0m
-[1;32m    127[0m             [0;32mand[0m [0mcodes[0m [0;32mas[0m [0mread[0m[0;34m-[0m[0monly[0m [0marrays[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    128[0m         """
-[0;32m--> 129[0;31m         [0mvertices[0m [0;34m=[0m [0m_to_unmasked_float_array[0m[0;34m([0m[0mvertices[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    130[0m         [0m_api[0m[0;34m.[0m[0mcheck_shape[0m[0;34m([0m[0;34m([0m[0;32mNone[0m[0;34m,[0m [0;36m2[0m[0;34m)[0m[0;34m,[0m [0mvertices[0m[0;34m=[0m[0mvertices[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    131[0m [0;34m[0m[0m
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/matplotlib/cbook/__init__.py[0m in [0;36m_to_unmasked_float_array[0;34m(x)[0m
-[1;32m   1365[0m     """
-[1;32m   1366[0m     [0;32mif[0m [0mhasattr[0m[0;34m([0m[0mx[0m[0;34m,[0m [0;34m'mask'[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1367[0;31m         [0;32mreturn[0m [0mnp[0m[0;34m.[0m[0mma[0m[0;34m.[0m[0masarray[0m[0;34m([0m[0mx[0m[0;34m,[0m [0mfloat[0m[0;34m)[0m[0;34m.[0m[0mfilled[0m[0;34m([0m[0mnp[0m[0;34m.[0m[0mnan[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1368[0m     [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1369[0m         [0;32mreturn[0m [0mnp[0m[0;34m.[0m[0masarray[0m[0;34m([0m[0mx[0m[0;34m,[0m [0mfloat[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/numpy/ma/core.py[0m in [0;36mfilled[0;34m(self, fill_value)[0m
-[1;32m   3776[0m         [0mm[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_mask[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3777[0m         [0;32mif[0m [0mm[0m [0;32mis[0m [0mnomask[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 3778[0;31m             [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_data[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   3779[0m [0;34m[0m[0m
-[1;32m   3780[0m         [0;32mif[0m [0mfill_value[0m [0;32mis[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/anaconda3/lib/python3.8/site-packages/numpy/ma/core.py[0m in [0;36m_get_data[0;34m(self)[0m
-[1;32m   3650[0m         [0mattribute[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3651[0m         """
-[0;32m-> 3652[0;31m         [0;32mreturn[0m [0mndarray[0m[0;34m.[0m[0mview[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0m_baseclass[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   3653[0m [0;34m[0m[0m
-[1;32m   3654[0m     [0m_data[0m [0;34m=[0m [0mproperty[0m[0;34m([0m[0mfget[0m[0;34m=[0m[0m_get_data[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-
-[0;31mKeyboardInterrupt[0m: 
-KeyboardInterrupt: 
+  File "/home/dkeathley/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 949, in async_execute_cell
+    exec_reply = await self.task_poll_for_reply
+  File "/home/dkeathley/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 754, in _async_poll_for_reply
+    await self._async_handle_timeout(timeout, cell)
+  File "/home/dkeathley/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 801, in _async_handle_timeout
+    raise CellTimeoutError.error_from_timeout_and_cell(
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 10 seconds.
+The message was: Cell execution timed out.
+Here is a preview of the cell contents:
+-------------------
+['fig = plt.figure()', 'fig.set_size_inches(14, 5)', '', 'ax_amp = fig.add_subplot(1, 3, 1)', 'markerline, stemlines, baseline = ax_amp.stem(np.fft.fftshift(f), ']
+...
+['#Setup the animation', 'ani = animation.FuncAnimation(fig, updatefig, interval=N, blit=True)', '', '#Convert to javascript html movie', 'HTML(ani.to_jshtml())']
+-------------------
 
