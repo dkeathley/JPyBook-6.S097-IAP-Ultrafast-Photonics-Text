@@ -34,10 +34,31 @@ The course is structured into five chapters the content of which will be present
     - Phase characterization
     - EO sampling
 
+## Reading Materials and Reference
+
+This course will largely pull from the [Ultrafast Optics text from Franz Kaertner](https://ocw.mit.edu/courses/6-977-ultrafast-optics-spring-2005/f806ff596f9bffb74003360e2c05c086_MIT6_977S05_textbook.pdf).  In table {numref}`tbl-reading-material`, particular reading material of interest is highlighted for each chapter.
+
+```{table} Course reading material.
+:name: tbl-reading-material
+
+| Course Chapter | Lecture Nos. | Textbook Reading Material| 
+| --- | --- | --- |
+| 1 | 1 | Chs. 1 (1.1) & 2 (2.6)|
+| 2 | 2,3 | Ch. 2 (2.6) |
+| 3 | 4,5 | Ch. 3 |
+| 4 | 6 | Chs. 5 & 6 |
+| 5 | 7,8 | Chs. 3 (3.7) & 10 |
+
+```
+
+Another excellent book you can use to compliment this material is [Andrew Weiner's Ultrafast Optics textbook](https://mit.primo.exlibrisgroup.com/discovery/fulldisplay?context=L&docid=alma990016692990106761&lang=en&search_scope=all&tab=all&vid=01MIT_INST:MIT). (The link is to the MIT library page which provides access to a digital version).
+
+Finally, you will have access through the UC Davis Canvas website for their winter quarter course on Ultrafast Photonics.  We will move at an accelerated pace, but you are encouraged to look ahead at leacture material and past lectures to provide further context and extended information about particular topics presented in this IAP course.  
+
 
 ## Course Credit
 
-This course will be for credit as P/D/F.  A passing grade will be determined from course participation and problem sets.  
+This course will be for credit as P/D/F.  A passing grade will be determined from course participation and problem sets.  A passing student should show sufficient engagement with the material.  
 
 The problem sets will be provided as the course progresses with links posted here. 
 
