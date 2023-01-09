@@ -59,13 +59,11 @@ Finally, you will have access through the UC Davis Canvas website for their wint
 
 There will be three problem sets.  
 
-The problem sets will be uploaded and graded on [Canvas](https://canvas.mit.edu/courses/20238).  
+The problem sets will be uploaded here as the course progresses.  Submission and grading will be through the course [Canvas Page](https://canvas.mit.edu/courses/20238).  
 
 ## Course Credit
 
 This course will be for credit as P/D/F.  A passing grade will be determined from course participation and problem sets.  A passing student should show sufficient engagement with the material.  
-
-The problem sets will be provided as the course progresses with links posted here. 
 
 # Table of Contents
 
