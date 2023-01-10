@@ -4,13 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chapter 2 – Pulse Interactions with Linear Media &#8212; 6.S097 Ultrafast Photonics (IAP 2023)</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,16 +18,20 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
+    
+      
+
+    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -37,13 +39,12 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -51,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -65,21 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -88,10 +75,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -109,15 +95,14 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    6.S097 – Ultrafast Photonics (IAP 2023)
-                </a>
-            </li>
-        </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   6.S097 – Ultrafast Photonics (IAP 2023)
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="chapter-1.html">
    Chapter 1 – Introduction
@@ -146,17 +131,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -164,209 +144,99 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics/main?urlpath=tree/chapter-2.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://colab.research.google.com/github/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics/blob/main/chapter-2.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics/issues/new?title=Issue%20on%20page%20%2Fchapter-2.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/chapter-2.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/chapter-2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics/issues/new?title=Issue%20on%20page%20%2Fchapter-2.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics/main?urlpath=tree/chapter-2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics/blob/main/chapter-2.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#materials-and-notes">
    Materials and Notes
@@ -467,11 +337,12 @@ title="Print to PDF"
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Chapter 2 – Pulse Interactions with Linear Media</h1>
@@ -588,12 +459,11 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="chapter-2-pulse-interactions-with-linear-media">
-<h1>Chapter 2 – Pulse Interactions with Linear Media<a class="headerlink" href="#chapter-2-pulse-interactions-with-linear-media" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="chapter-2-pulse-interactions-with-linear-media">
+<h1>Chapter 2 – Pulse Interactions with Linear Media<a class="headerlink" href="#chapter-2-pulse-interactions-with-linear-media" title="Permalink to this headline">¶</a></h1>
 <p>In this chapter we explore the interaction of ultrafast pulses with linear media.</p>
 <p>In particular, we discuss:</p>
 <ul class="simple">
@@ -601,16 +471,16 @@ title="Print to PDF"
 <li><p>Cavities</p></li>
 <li><p>Propagation in dispersive media (pulse stretching and compression)</p></li>
 </ul>
-<section id="materials-and-notes">
-<h2>Materials and Notes<a class="headerlink" href="#materials-and-notes" title="Permalink to this headline">#</a></h2>
+<div class="section" id="materials-and-notes">
+<h2>Materials and Notes<a class="headerlink" href="#materials-and-notes" title="Permalink to this headline">¶</a></h2>
 <p>See Ch. 2 (2.6) of <a class="reference external" href="https://ocw.mit.edu/courses/6-977-ultrafast-optics-spring-2005/f806ff596f9bffb74003360e2c05c086_MIT6_977S05_textbook.pdf">Ultrafast Optics text from Franz Kaertner</a>.</p>
 <p>Lecture 2 notes are <a class="reference external" href="https://github.com/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics/blob/main/MATERIALS/CH2/ch-2-lecture-2-notes.pdf">here</a>.</p>
-</section>
-<section id="simulation-and-computation-1-fabry-perot-cavity">
-<h2>Simulation and Computation 1: Fabry-Perot Cavity<a class="headerlink" href="#simulation-and-computation-1-fabry-perot-cavity" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="simulation-and-computation-1-fabry-perot-cavity">
+<h2>Simulation and Computation 1: Fabry-Perot Cavity<a class="headerlink" href="#simulation-and-computation-1-fabry-perot-cavity" title="Permalink to this headline">¶</a></h2>
 <p>Simulation and computational examples for this chapter follow.</p>
-<section id="headers-packages-and-variables-run-first">
-<h3>Headers, Packages, and Variables – Run First!<a class="headerlink" href="#headers-packages-and-variables-run-first" title="Permalink to this headline">#</a></h3>
+<div class="section" id="headers-packages-and-variables-run-first">
+<h3>Headers, Packages, and Variables – Run First!<a class="headerlink" href="#headers-packages-and-variables-run-first" title="Permalink to this headline">¶</a></h3>
 <p>The following code-block contains the packages, functions and variables needed for the code found later in this notebook.  It must be run first.  Note that if you are running this on your personal computer, you should ensure that all packages needed are installed first (for example the <a class="reference external" href="https://numpy.org/">numpy</a>, <a class="reference external" href="https://scipy.org/">scipy</a>, and <a class="reference external" href="https://matplotlib.org/">matplotlib</a> packages must be installed on your computer along with others).  You can find a launcher link at the top to conveniently run this notebook in Google Colab.</p>
 <p>The code below is hidden by default, but you are encouraged to expand it and study it.  The functions and constants will update as needed during the progression of the course, so you should note what new functions have been and added and study how they work.</p>
 <div class="cell docutils container">
@@ -696,12 +566,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="define-and-plot-e-fields-from-a-pulse">
-<h3>Define and Plot E-Fields from a Pulse<a class="headerlink" href="#define-and-plot-e-fields-from-a-pulse" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="define-and-plot-e-fields-from-a-pulse">
+<h3>Define and Plot E-Fields from a Pulse<a class="headerlink" href="#define-and-plot-e-fields-from-a-pulse" title="Permalink to this headline">¶</a></h3>
 <p>We need to start by defining our pulse and its envelope. We can use the pre-defined function in the headers block above for that.</p>
-<section id="time-domain-fields">
-<h4>Time-Domain Fields<a class="headerlink" href="#time-domain-fields" title="Permalink to this headline">#</a></h4>
+<div class="section" id="time-domain-fields">
+<h4>Time-Domain Fields<a class="headerlink" href="#time-domain-fields" title="Permalink to this headline">¶</a></h4>
 <div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Pulse Settings -- </span>
@@ -735,9 +605,9 @@ title="Print to PDF"
 <img alt="_images/chapter-2_12_0.png" src="_images/chapter-2_12_0.png" />
 </div>
 </div>
-</section>
-<section id="frequency-domain-representation">
-<h4>Frequency-Domain Representation<a class="headerlink" href="#frequency-domain-representation" title="Permalink to this headline">#</a></h4>
+</div>
+<div class="section" id="frequency-domain-representation">
+<h4>Frequency-Domain Representation<a class="headerlink" href="#frequency-domain-representation" title="Permalink to this headline">¶</a></h4>
 <div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Take the FT of the envelope</span>
@@ -763,14 +633,14 @@ title="Print to PDF"
 <img alt="_images/chapter-2_14_0.png" src="_images/chapter-2_14_0.png" />
 </div>
 </div>
-</section>
-</section>
-<section id="fabry-perot-cavity">
-<h3>Fabry-Perot Cavity<a class="headerlink" href="#fabry-perot-cavity" title="Permalink to this headline">#</a></h3>
+</div>
+</div>
+<div class="section" id="fabry-perot-cavity">
+<h3>Fabry-Perot Cavity<a class="headerlink" href="#fabry-perot-cavity" title="Permalink to this headline">¶</a></h3>
 <p>Here we define the transfer function we derived for the Fabry-Perot cavity.</p>
 <p>We explicitly define the phase accumulated between the elements as <code class="docutils literal notranslate"><span class="pre">phi</span> <span class="pre">=</span> <span class="pre">k*L</span></code>.  This way we can play with the length of the Fabry-Perot cavity and observe the output pulse envelope.</p>
-<section id="h-and-cavity-output-when-driven-by-the-pulse">
-<h4><span class="math notranslate nohighlight">\(H\)</span> and Cavity Output When Driven by the Pulse<a class="headerlink" href="#h-and-cavity-output-when-driven-by-the-pulse" title="Permalink to this headline">#</a></h4>
+<div class="section" id="h-and-cavity-output-when-driven-by-the-pulse">
+<h4><span class="math notranslate nohighlight">\(H\)</span> and Cavity Output When Driven by the Pulse<a class="headerlink" href="#h-and-cavity-output-when-driven-by-the-pulse" title="Permalink to this headline">¶</a></h4>
 <p>Here we calculate and examine the amplitude and phase of the complex transfer function of the cavity <span class="math notranslate nohighlight">\(H\)</span>, and the outgoing pulse in frequency and time.</p>
 <p>The code below is slightly more complicated as we use widgets to let us dynamically change parameters.  However, I think this is useful for your own simulations in the future so that you can see how different parameters change the behavior more easily.</p>
 <p>Some questions to think about:</p>
@@ -856,13 +726,13 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-</section>
-</section>
-<section id="simulation-and-computation-2-pulse-propagation-in-dispersive-media">
-<h2>Simulation and Computation 2: Pulse Propagation in Dispersive Media<a class="headerlink" href="#simulation-and-computation-2-pulse-propagation-in-dispersive-media" title="Permalink to this headline">#</a></h2>
-<section id="id1">
-<h3>Define and Plot E-Fields from a Pulse<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+</div>
+</div>
+</div>
+<div class="section" id="simulation-and-computation-2-pulse-propagation-in-dispersive-media">
+<h2>Simulation and Computation 2: Pulse Propagation in Dispersive Media<a class="headerlink" href="#simulation-and-computation-2-pulse-propagation-in-dispersive-media" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Define and Plot E-Fields from a Pulse<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>We need to start by defining our pulse and its envelope. We can use the pre-defined function in the headers block above for that.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -921,9 +791,9 @@ title="Print to PDF"
 {"model_id": "e6c502b21f4d4244b2422daa1fbad741", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
-</section>
-<section id="id2">
-<h3>Frequency-Domain Representation<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="id2">
+<h3>Frequency-Domain Representation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>The code below shows the frequency domain form of the pulse for visualization.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -953,17 +823,17 @@ title="Print to PDF"
 <img alt="_images/chapter-2_26_0.png" src="_images/chapter-2_26_0.png" />
 </div>
 </div>
-</section>
-<section id="impact-of-material-dispersion-on-pulse-propagation">
-<h3>Impact of Material Dispersion on Pulse Propagation<a class="headerlink" href="#impact-of-material-dispersion-on-pulse-propagation" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="impact-of-material-dispersion-on-pulse-propagation">
+<h3>Impact of Material Dispersion on Pulse Propagation<a class="headerlink" href="#impact-of-material-dispersion-on-pulse-propagation" title="Permalink to this headline">¶</a></h3>
 <p>Here we can continue the concept of a transfer function to help us understand the impact of dispersion on pulse propagation through a medium.</p>
 <p>For the FP cavity above, there was an influence on the output pulse’s amplitude and phase after propagation. Both the amplitude reshaping and the phase dispersion impact the output pulse shape.  However, for a transparent dispersive medium this impact is primarily within the phase of the pulse. As discussed in the lecture, a medium that exhibits a high dispersion in phase after propagation (that is the accumulated phase changes significantly as a function of frequency) can also have a significant impact on the outgoing pulse shape.</p>
 <p>As discussed in lecture, we can write the effect of material dispersion as a polynomial series in phase.</p>
 <p><span class="math notranslate nohighlight">\(\varphi(\Omega) = \varphi_1 \Omega + \frac{1}{2}\varphi_2 \Omega^2 + \frac{1}{6}\varphi_3 \Omega^3 + ... + \frac{1}{N!}\varphi_N \Omega^N \)</span></p>
 <p>Note here that we are speaking of <span class="math notranslate nohighlight">\(\Omega = \omega - \omega_0\)</span> as being the frequency space of the envelope, where <span class="math notranslate nohighlight">\(\omega\)</span> is the absolute frequency of the electric field pulse, and <span class="math notranslate nohighlight">\(\omega_0\)</span> is the central frequency.  We discussed this in the first recitation, and this trick is used a lot to help us numerically (because it avoids very rapidly oscillating terms).   Note that in the code we mostly use the envelop form denoted as <code class="docutils literal notranslate"><span class="pre">w</span></code> with the central frequency denoted as <code class="docutils literal notranslate"><span class="pre">wc</span></code>.</p>
-</section>
-<section id="study-impact-of-higher-order-dispersion">
-<h3>Study Impact of Higher-Order Dispersion<a class="headerlink" href="#study-impact-of-higher-order-dispersion" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="study-impact-of-higher-order-dispersion">
+<h3>Study Impact of Higher-Order Dispersion<a class="headerlink" href="#study-impact-of-higher-order-dispersion" title="Permalink to this headline">¶</a></h3>
 <p>In the interactive code below, you can set values of <span class="math notranslate nohighlight">\(\varphi_N\)</span> for orderst 2, 3, and 4 and observe the impact on the transformed pulse. Note that we disregard <span class="math notranslate nohighlight">\(\varphi_1\)</span> as it simply corresponds to a time shift.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1017,9 +887,9 @@ title="Print to PDF"
 {"model_id": "2a808d21576e49afa881d68cb3381d00", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
-</section>
-<section id="real-material-dispersion">
-<h3>Real Material Dispersion<a class="headerlink" href="#real-material-dispersion" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="real-material-dispersion">
+<h3>Real Material Dispersion<a class="headerlink" href="#real-material-dispersion" title="Permalink to this headline">¶</a></h3>
 <p>In this section we begin examining the impact of real material dispersion in ultrafast pulse propagation.  We use the Sellmeier coefficients of various low-loss materials to determine their index of refraction.</p>
 <p><strong>Note:</strong> Care must be taken to ensure that the Sellmeier formalism is valid over the range of wavelengths within the pulse of interest).  In particular, below we use silicon as an example material where these coefficients are only valid over longer near-infrared wavelengths and the mid-infrared.</p>
 <p><strong>Resources</strong></p>
@@ -1028,8 +898,8 @@ title="Print to PDF"
 <li><p><a class="reference external" href="https://www.rp-photonics.com/chromatic_dispersion.html">Chromatic Dispersion - RP Photonics</a></p></li>
 <li><p><a class="reference external" href="https://refractiveindex.info/">refractiveindex.info</a></p></li>
 </ol>
-<section id="index-calculation-with-sellmeier-coefficients">
-<h4>Index Calculation with Sellmeier Coefficients<a class="headerlink" href="#index-calculation-with-sellmeier-coefficients" title="Permalink to this headline">#</a></h4>
+<div class="section" id="index-calculation-with-sellmeier-coefficients">
+<h4>Index Calculation with Sellmeier Coefficients<a class="headerlink" href="#index-calculation-with-sellmeier-coefficients" title="Permalink to this headline">¶</a></h4>
 <p>Example calculation of refractive index of silicon throughout the near-to-mid-infrared.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1054,9 +924,9 @@ title="Print to PDF"
 </div>
 </div>
 <p>Note the index change as a function of wavelength.  Since the phase accumulated in propagation goes as <span class="math notranslate nohighlight">\(\varphi = 2\pi n(\lambda) L/\lambda\)</span> where <span class="math notranslate nohighlight">\(L\)</span> is the propagation length, this leads to phase dispersion on an outgoing pulse after propagation.</p>
-</section>
-<section id="pulse-propagation-through-real-materials">
-<h4>Pulse Propagation Through Real Materials<a class="headerlink" href="#pulse-propagation-through-real-materials" title="Permalink to this headline">#</a></h4>
+</div>
+<div class="section" id="pulse-propagation-through-real-materials">
+<h4>Pulse Propagation Through Real Materials<a class="headerlink" href="#pulse-propagation-through-real-materials" title="Permalink to this headline">¶</a></h4>
 <p>The purpose of the interactive code below is to compare pulse propagation through various thicknesses of two example materials: SF10, Si, and BK7.  Pick a material and adjust the thickness to observe how the pulse is reshaped.</p>
 <p>Note in the calculation that we remove the time-shift from the group velocity term.  This is important for numerical computations! (For example, try removing it and see what happens).</p>
 <div class="cell docutils container">
@@ -1147,10 +1017,10 @@ title="Print to PDF"
 {"model_id": "1fec75211d9f4653b38490e95879732b", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
-</section>
-</section>
-<section id="pulse-stretching-and-compressing-with-material-dispersion">
-<h3>Pulse Stretching and Compressing With Material Dispersion<a class="headerlink" href="#pulse-stretching-and-compressing-with-material-dispersion" title="Permalink to this headline">#</a></h3>
+</div>
+</div>
+<div class="section" id="pulse-stretching-and-compressing-with-material-dispersion">
+<h3>Pulse Stretching and Compressing With Material Dispersion<a class="headerlink" href="#pulse-stretching-and-compressing-with-material-dispersion" title="Permalink to this headline">¶</a></h3>
 <p>This demonstration shows how normal and anomalous dispersion can be combined for pulse stretching and compression.  For a wavelength of 1550 nm, silicon exhibits a positive GVD, while BK7 exhibits a negative GVD.  This means that they can be combined at varying thicknesses for pulse stretching and then compression.</p>
 <p><strong>Questions</strong></p>
 <ol class="simple">
@@ -1241,9 +1111,9 @@ title="Print to PDF"
 {"model_id": "59a695c189d042f2a360fb127b4ea437", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
 <script type="application/vnd.jupyter.widget-state+json">
@@ -1273,11 +1143,9 @@ title="Print to PDF"
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="chapter-1.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1293,28 +1161,24 @@ title="Print to PDF"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By P. Donald Keathley, William P. Putnam<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+    <footer class="footer">
+  <p>
     
-</div>
+      By P. Donald Keathley, William P. Putnam<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>
