@@ -61,6 +61,10 @@ There will be three problem sets.
 
 The problem sets will be uploaded here as the course progresses.  Submission and grading will be through the course [Canvas Page](https://canvas.mit.edu/courses/20238).  
 
+## Course Materials
+
+Course materials can be found in [this Google Drive folder](https://drive.google.com/drive/folders/1PLPXFHaRfZv0kEO8l_J4AB7U0dIZcLFk?usp=share_link).  There you will find archived content from last years course (also joint with UC Davis), as well as content for this ongoing course (lecture notes, videos, etc).  
+
 ## Course Credit
 
 This course will be for credit as P/D/F.  A passing grade will be determined from course participation and problem sets.  A passing student should show sufficient engagement with the material.  
