@@ -4,8 +4,8 @@ This is the course website for 2023 IAP course 6.S097 -- Ultrafast Photonics.
 
 ## Instructor
 
-Donnie Keathley
-Office: 36-285
+Donnie Keathley <br>
+Office: 36-285 <br>
 Email: pdkeat2@mit.edu
 
 ## Course Description
