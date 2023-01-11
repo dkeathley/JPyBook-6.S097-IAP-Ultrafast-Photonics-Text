@@ -2,6 +2,12 @@
 
 This is the course website for 2023 IAP course 6.S097 -- Ultrafast Photonics.  
 
+## Instructor
+
+Donnie Keathley
+Office: 36-285
+Email: pdkeat2@mit.edu
+
 ## Course Description
 
 Knowledge of the fundamentals of ultrafast photonics is becoming increasingly valuable as ultrafast optical sources become more ubiquitous with an ever-growing number of applications. Relatively compact ultrafast optical sources with pulse durations ranging from nanoseconds down to femtoseconds are now commercially available across a broad range of wavelengths. Current applications are wide-ranging and include biological imaging, quantum optical technologies, chemical sensing, and precision measurements of time and distance among many others. During this IAP course, we will cover the essentials of ultrafast photonics. Topics will include: (1) the science of ultrafast laser pulses and their interaction with matter; (2) the technology to generate and manipulate ultrafast pulses of light; and (3) an overview of select applications of ultrafast photonics systems. This course will serve as a foundation for those interested in experimental and/or theoretical work involving ultrafast optical systems. Some basic knowledge of Fourier analysis, differential equations, and electromagnetic waves is assumed. 
@@ -64,6 +70,8 @@ The problem sets will be uploaded here as the course progresses.  Submission and
 ## Course Materials
 
 Course materials can be found in [this Google Drive folder](https://drive.google.com/drive/folders/1PLPXFHaRfZv0kEO8l_J4AB7U0dIZcLFk?usp=share_link).  There you will find archived content from last years course (also joint with UC Davis), as well as content for this ongoing course (lecture notes, videos, etc).  
+
+You can also find materials on the [UC Davis Canvas course page](https://canvas.ucdavis.edu/). **If you did not receive access to any of this material, please let me know via Slack or email.** 
 
 ## Course Credit
 
