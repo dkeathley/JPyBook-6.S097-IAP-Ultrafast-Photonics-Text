@@ -77,6 +77,10 @@ You can also find materials on the [UC Davis Canvas course page](https://canvas.
 
 This course will be for credit as P/D/F.  A passing grade will be determined from course participation and problem sets.  A passing student should show sufficient engagement with the material.  
 
+## Errors and Corrections
+
+See an error?  Please file a bug report on teh [Github page](https://github.com/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics).  
+
 # Table of Contents
 
 ```{tableofcontents}
