@@ -66,8 +66,6 @@ This course will largely pull from the [Ultrafast Optics text from Franz Kaertne
 
 Another excellent book you can use to compliment this material is [Andrew Weiner's Ultrafast Optics textbook](https://mit.primo.exlibrisgroup.com/discovery/fulldisplay?context=L&docid=alma990016692990106761&lang=en&search_scope=all&tab=all&vid=01MIT_INST:MIT). (The link is to the MIT library page which provides access to a digital version).
 
-Finally, you will have access through the UC Davis Canvas website for their winter quarter course on Ultrafast Photonics.  We will move at an accelerated pace, but you are encouraged to look ahead at leacture material and past lectures to provide further context and extended information about particular topics presented in this IAP course.  
-
 ## Problem Sets
 
 There will be three problem sets.  
@@ -76,9 +74,7 @@ The problem sets will be uploaded here as the course progresses.  Submission and
 
 ## Course Materials
 
-Course materials can be found in [this Google Drive folder](https://drive.google.com/drive/folders/1PLPXFHaRfZv0kEO8l_J4AB7U0dIZcLFk?usp=share_link).  There you will find archived content from last years course (also joint with UC Davis), as well as content for this ongoing course (lecture notes, videos, etc).  
-
-You can also find materials on the [UC Davis Canvas course page](https://canvas.ucdavis.edu/). **If you did not receive access to any of this material, please let me know via Slack or email.** 
+Course materials can be found in [this Google Drive folder](https://drive.google.com/drive/folders/1PLPXFHaRfZv0kEO8l_J4AB7U0dIZcLFk?usp=share_link).  There you will find archived content from last years course (also joint with UC Davis) for now.  Any updates to this content will be replaced (e.g. updated recordings, lecture notes, etc.).  There you will also find lecture recordings and notes for the UC Davis offering of Ultrafast Photonics.  We are not able to offer these courses concurrently as we move at an accelerated pace at MIT.  However, we encourage communication between the two courses.  To facilitate this a joint Slack channel will be created.  
 
 ## Course Credit
 
