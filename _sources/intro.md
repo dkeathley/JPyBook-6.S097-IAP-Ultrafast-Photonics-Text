@@ -49,7 +49,7 @@ The course is structured into five chapters the content of which will be present
 
 ## Reading Materials and Reference
 
-This course will largely pull from the [Ultrafast Optics text from Franz Kaertner](https://ocw.mit.edu/courses/6-977-ultrafast-optics-spring-2005/f806ff596f9bffb74003360e2c05c086_MIT6_977S05_textbook.pdf).  In table {numref}`tbl-reading-material`, particular reading material of interest is highlighted for each chapter.
+This course will largely pull from the [Ultrafast Optics text from Franz Kaertner](https://drive.google.com/file/d/1LIFzv88v01RSK6lNyIiJCTH1AmmgMbHD/view?usp=sharing).  In table {numref}`tbl-reading-material`, particular reading material of interest is highlighted for each chapter.
 
 ```{table} Course reading material.
 :name: tbl-reading-material
