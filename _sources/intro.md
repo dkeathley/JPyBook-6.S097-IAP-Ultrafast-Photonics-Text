@@ -10,7 +10,9 @@ Email: pdkeat2@mit.edu
 
 ## Course Description
 
-Knowledge of the fundamentals of ultrafast photonics is becoming increasingly valuable as ultrafast optical sources become more ubiquitous with an ever-growing number of applications. Relatively compact ultrafast optical sources with pulse durations ranging from nanoseconds down to femtoseconds are now commercially available across a broad range of wavelengths. Current applications are wide-ranging and include biological imaging, quantum optical technologies, chemical sensing, and precision measurements of time and distance among many others. During this IAP course, we will cover the essentials of ultrafast photonics. Topics will include: (1) the science of ultrafast laser pulses and their interaction with matter; (2) the technology to generate and manipulate ultrafast pulses of light; and (3) an overview of select applications of ultrafast photonics systems. This course will serve as a foundation for those interested in experimental and/or theoretical work involving ultrafast optical systems. Some basic knowledge of Fourier analysis, differential equations, and electromagnetic waves is assumed. 
+Knowledge of the fundamentals of ultrafast photonics is becoming increasingly valuable as ultrafast optical sources become more ubiquitous with an ever-growing number of applications. Relatively compact ultrafast optical sources with pulse durations ranging from nanoseconds down to femtoseconds are now commercially available across a broad range of wavelengths. Current applications are wide-ranging and include biological imaging, quantum optical technologies, chemical sensing, and precision measurements of time and distance among many others. 
+
+During this IAP course, we will cover the essentials of ultrafast photonics. Topics will include: (1) the science of ultrafast laser pulses and their interaction with matter; (2) the technology to generate and manipulate ultrafast pulses of light; and (3) an overview of select applications of ultrafast photonics systems. This course will serve as a foundation for those interested in experimental and/or theoretical work involving ultrafast optical systems. Some basic knowledge of Fourier analysis, differential equations, and electromagnetic waves is assumed. 
 
 This course is designed to overlap and coordinate with an ultrafast photonics course taught by Prof. William Putnam at U.C. Davis. Dr. Keathley will lead the lectures and course at MIT, with online material, such as lecture recordings and notes, being shared between MIT and UC Davis.
 
@@ -18,27 +20,32 @@ This course is designed to overlap and coordinate with an ultrafast photonics co
 
 The course is structured into five chapters the content of which will be presented over eight lectures. The chapters and lectures will be organized as follows.
 
- - **Chapter 1 (Lecture 1):**  Introduction
+ - **Chapter 1 (Lecture 1.1):**  Introduction
      - Introduction to the course
      - Notation
      - Quantifying ultrafast pulses
      - Time-frequency relations
      - Core principles of ultrafast pulse formation
- - **Chapter 2 (Lectures 2 and 3):** Pulse Interaction with Linear Media
+ - **Chapter 2 (Lectures 1.2 and 2):** Pulse Interaction with Linear Media
     - Reflection and transmission elements
     - Cavities
     - Propagation in dispersive media (pulse stretching and compression)
- - **Chapter 3 (Lectures 4 and 5):** Nonlinear Pulse Propagation
+ - **Chapter 3 (Lectures 3 and 4):** Nonlinear Pulse Propagation
     - Self-phase modulation
     - Soliton formation
     - Supercontinuum generation
     - Modeling a nonlinear photonic switch
- - **Chapter 4 (Lecture 6):** Modelocking (Active and Passive)
- - **Chapter 5 (Lectures 7 and 8):** Dispersion Management and Pulse Characterization 
+ - **Chapter 4 (Lecture 5):** Modelocking (Active and Passive)
+ - **Chapter 5 (Lectures 6 and 7):** Dispersion Management and Pulse Characterization 
     - Pulse compression schemes
     - Autocorrelation 
     - Phase characterization
     - EO sampling
+ - **Chapter 6 (Lecture 8):** Breaking the Femtosecond Barrier
+    - Attosecond science
+	- Field-resolved metrology
+    - (further details TBD)
+	
 
 ## Reading Materials and Reference
 
@@ -65,7 +72,7 @@ Finally, you will have access through the UC Davis Canvas website for their wint
 
 There will be three problem sets.  
 
-The problem sets will be uploaded here as the course progresses.  Submission and grading will be through the course [Canvas Page](https://canvas.mit.edu/courses/20238).  
+The problem sets will be uploaded here as the course progresses.  Submission and grading will be through the course [Canvas Page](https://canvas.mit.edu/courses/24085).  
 
 ## Course Materials
 
@@ -79,7 +86,7 @@ This course will be for credit as P/D/F.  A passing grade will be determined fro
 
 ## Errors and Corrections
 
-See an error?  Please file a bug report on teh [Github page](https://github.com/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics).  
+See an error?  Please file a bug report on the [Github page](https://github.com/dkeathley/JPyBook-6.S097-IAP-Ultrafast-Photonics-Text).  
 
 # Table of Contents
 
