@@ -466,7 +466,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Settings --</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span> <span class="c1">#Time axis</span>
 <span class="n">T</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1">#Period of first harmonic</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">#Number of harmonic orders</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1">#Number of harmonic orders</span>
 <span class="n">phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="c1">#Phase profiles</span>
 <span class="c1">#phi = 2*np.pi*np.random.rand(N)</span>
 <span class="c1">#phi = 2*np.pi*(np.arange(1, N+1)/N)**2</span>
@@ -480,22 +480,24 @@ document.write(`
 
 <span class="c1">#Add each harmonic together up to N</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w_0</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">25</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w_0</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
     <span class="n">A</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w_0</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
   
 
+
+
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;A(t) and |A(t)|^2&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;|A(t)|^2&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
   
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;A(t) and |A(t)|^2&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;|A(t)|^2&#39;)
 </pre></div>
 </div>
-<img alt="_images/c6afe489eea05adfd465fff57f37f39493a2006c08b449e6c5f7e183e6b59623.png" src="_images/c6afe489eea05adfd465fff57f37f39493a2006c08b449e6c5f7e183e6b59623.png" />
+<img alt="_images/35d7342ce8ca336d19a08c8498046302ab9e00232eb5782dcb033690d065484d.png" src="_images/35d7342ce8ca336d19a08c8498046302ab9e00232eb5782dcb033690d065484d.png" />
 </div>
 </div>
 <p>Now 10 sinusoids.</p>
@@ -512,8 +514,6 @@ document.write(`
 <span class="c1">#-- Code --</span>
 <span class="n">w_0</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">T</span> <span class="c1">#central frequency</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1">#initialize envelope</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-
 
 <span class="c1">#Add each harmonic together up to N</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
@@ -535,7 +535,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;|A(t)|^2&#39;)
 </pre></div>
 </div>
-<img alt="_images/75934d082abfd02f41f0a7302a46c4c59cb0122add576efb3c879d15863f800e.png" src="_images/75934d082abfd02f41f0a7302a46c4c59cb0122add576efb3c879d15863f800e.png" />
+<img alt="_images/a0777321a98cbf76ae225aba345809196adc768790b0c836e90e304a1e28ba61.png" src="_images/a0777321a98cbf76ae225aba345809196adc768790b0c836e90e304a1e28ba61.png" />
 </div>
 </div>
 <p>Now 20 sinusoids.</p>
@@ -552,8 +552,6 @@ document.write(`
 <span class="c1">#-- Code --</span>
 <span class="n">w_0</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">T</span> <span class="c1">#central frequency</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1">#initialize envelope</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-
 
 <span class="c1">#Add each harmonic together up to N</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
@@ -575,7 +573,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;|A(t)|^2&#39;)
 </pre></div>
 </div>
-<img alt="_images/e41efa8693bf6dbbeb79e994a49779f6fe659ed79d09569cd0e2bf183dc5a45d.png" src="_images/e41efa8693bf6dbbeb79e994a49779f6fe659ed79d09569cd0e2bf183dc5a45d.png" />
+<img alt="_images/e83e51a05575ed852df45e3990e06f736cd19678bdca1056fa14761051699103.png" src="_images/e83e51a05575ed852df45e3990e06f736cd19678bdca1056fa14761051699103.png" />
 </div>
 </div>
 <p>So long as the phases are all locked together, the more harmonic orders that are present, the shorter the resultant pulses are in time.  This is a general trend – the broader the bandwidth the shorte the pulse that <em>can</em> be created.  However, this is not necessarily true and depends sensitively on the phase relationship between each wavelength component of the pulse.</p>
@@ -593,8 +591,6 @@ document.write(`
 <span class="c1">#-- Code --</span>
 <span class="n">w_0</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">T</span> <span class="c1">#central frequency</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1">#initialize envelope</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-
 
 <span class="c1">#Add each harmonic together up to N</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
@@ -616,11 +612,11 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;|A(t)|^2&#39;)
 </pre></div>
 </div>
-<img alt="_images/ff04e98f46b4147a3d5397f5793a2197bf5c0636e70d5d319e89bebe378672d5.png" src="_images/ff04e98f46b4147a3d5397f5793a2197bf5c0636e70d5d319e89bebe378672d5.png" />
+<img alt="_images/7a37ebb5b859b46198ae7334ef21a451289c56823a15aaa8ee9eee9e193d74c0.png" src="_images/7a37ebb5b859b46198ae7334ef21a451289c56823a15aaa8ee9eee9e193d74c0.png" />
 </div>
 </div>
 <p>The time-domain profile is now random.  It has the same time-averaged power, but i snot repeatable.</p>
-<p>Now for a linear phase profile:</p>
+<p>Now for a quadratic phase profile.</p>
 <div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Settings --</span>
@@ -629,13 +625,11 @@ document.write(`
 <span class="n">N</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">#Number of harmonic orders</span>
 <span class="c1">#phi = np.zeros(N) #Phase profiles</span>
 <span class="c1">#phcvi = 2*np.pi*np.random.rand(N)</span>
-<span class="n">phi</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="o">**</span><span class="mi">1</span>
 
 <span class="c1">#-- Code --</span>
 <span class="n">w_0</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">T</span> <span class="c1">#central frequency</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1">#initialize envelope</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-
 
 <span class="c1">#Add each harmonic together up to N</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
@@ -657,47 +651,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;|A(t)|^2&#39;)
 </pre></div>
 </div>
-<img alt="_images/66e6c576a7225ab26b7ee9a41374e9ef4e14b3a5afbcf4edc1f5d9db125cab7f.png" src="_images/66e6c576a7225ab26b7ee9a41374e9ef4e14b3a5afbcf4edc1f5d9db125cab7f.png" />
-</div>
-</div>
-<p>And a quadratic phase profile:</p>
-<div class="cell tag_hide_input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Settings --</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span> <span class="c1">#Time axis</span>
-<span class="n">T</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1">#Period of first harmonic</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">#Number of harmonic orders</span>
-<span class="c1">#phi = np.zeros(N) #Phase profiles</span>
-<span class="c1">#phcvi = 2*np.pi*np.random.rand(N)</span>
-<span class="n">phi</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-
-<span class="c1">#-- Code --</span>
-<span class="n">w_0</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">T</span> <span class="c1">#central frequency</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1">#initialize envelope</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-
-
-<span class="c1">#Add each harmonic together up to N</span>
-<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-
-    <span class="n">A</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w_0</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="n">phi</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-  
-
-
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;|A(t)|^2&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-  
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;|A(t)|^2&#39;)
-</pre></div>
-</div>
-<img alt="_images/3c2ba654e8c55d92880a1cd4294abb2b6274422ae3af44601e1691e212ffbf65.png" src="_images/3c2ba654e8c55d92880a1cd4294abb2b6274422ae3af44601e1691e212ffbf65.png" />
+<img alt="_images/8e4d52119c3f303c83b1484e812ab014710f1adbf4549528457b0b6fcf8bfe54.png" src="_images/8e4d52119c3f303c83b1484e812ab014710f1adbf4549528457b0b6fcf8bfe54.png" />
 </div>
 </div>
 <p>Note that the pulses are still repeatable and well-defined, only now broader in time.  You will see this trend over and over.  Phase shifts as a funciton of wavelength lead to broadened/stretched pulses in time.</p>
@@ -737,7 +691,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;A(t)&#39;)
 </pre></div>
 </div>
-<img alt="_images/99a3f027bc3e17e934725014a5d8b0caf96b6d65ad7bd0844bd2b034b08467d8.png" src="_images/99a3f027bc3e17e934725014a5d8b0caf96b6d65ad7bd0844bd2b034b08467d8.png" />
+<img alt="_images/c044c4d42278d998084c4a261b717cac320627c2dee3cffbda5972e1872a1cb7.png" src="_images/c044c4d42278d998084c4a261b717cac320627c2dee3cffbda5972e1872a1cb7.png" />
 </div>
 </div>
 <p>We now need to take the Fourier transform to examine the pulse in the frequency domain.  We draw two reference lines at <span class="math notranslate nohighlight">\(\pm 2\pi/T\)</span> where <span class="math notranslate nohighlight">\(T\)</span> is the width of top-hat pulse.  This demonstrates the time-frequency relationship bewteen the top-hat in the time-domain, and the main lobe in the frquency domain.  Note, however, there are extended “sinc” lobes present in the frequency-domain.</p>
@@ -763,7 +717,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$A_f(\\omega)$&#39;)
 </pre></div>
 </div>
-<img alt="_images/a25eb40cadac6d6846b20269e46c26a57714f08e6953962f042005b6037ab114.png" src="_images/a25eb40cadac6d6846b20269e46c26a57714f08e6953962f042005b6037ab114.png" />
+<img alt="_images/74ce055e5ee70f69743eef2249d99b51f4121dafedf887bd057cde51412c0744.png" src="_images/74ce055e5ee70f69743eef2249d99b51f4121dafedf887bd057cde51412c0744.png" />
 </div>
 </div>
 <p>We can also now add in group delay dispersion (GDD) by adding in a quadratic phase profile in freuqency.  Note, as with the harmonic analysis above, this broadens the pulse.</p>
@@ -791,7 +745,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;A(t)&#39;)
 </pre></div>
 </div>
-<img alt="_images/2b985dda7e57af9f8c57525ce4a5f1b8ef30f94740071fd4c4b9552f2d374450.png" src="_images/2b985dda7e57af9f8c57525ce4a5f1b8ef30f94740071fd4c4b9552f2d374450.png" />
+<img alt="_images/ce6f33f19070cda214d8f2f9f2142fd41ca3643daa3d1fd6054866eeae1f3368.png" src="_images/ce6f33f19070cda214d8f2f9f2142fd41ca3643daa3d1fd6054866eeae1f3368.png" />
 </div>
 </div>
 </section>
