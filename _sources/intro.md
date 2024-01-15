@@ -56,11 +56,12 @@ This course will largely pull from the [Ultrafast Optics text from Franz Kaertne
 
 | Course Chapter | Lecture Nos. | Textbook Reading Material| 
 | --- | --- | --- |
-| 1 | 1 | Chs. 1 (1.1) & 2 (2.6)|
-| 2 | 2,3 | Ch. 2 (2.6) |
-| 3 | 4,5 | Ch. 3 |
-| 4 | 6 | Chs. 5 & 6 |
-| 5 | 7,8 | Chs. 3 (3.7) & 10 |
+| 1 | 1.1 | Chs. 1 (1.1) & 2 (2.6)|
+| 2 | 1.2,2 | Ch. 2 (2.6) |
+| 3 | 3,4 | Ch. 3 |
+| 4 | 5 | Chs. 5 & 6 |
+| 5 | 6,7 | Chs. 3 (3.7) & 10 |
+|6 | 8 | Notes Provided |
 
 ```
 
