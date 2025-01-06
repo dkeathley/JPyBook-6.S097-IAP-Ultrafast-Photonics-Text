@@ -1,4 +1,4 @@
-# 6.S097 -- Ultrafast Photonics (IAP 2025)
+# 6.S097 -- Ultrafast Photonics (IAP 2025
 
 This is the course website for 2025 IAP course 6.S097 -- Ultrafast Photonics.  
 
