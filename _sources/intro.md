@@ -1,12 +1,20 @@
-# 6.S097 -- Ultrafast Photonics (IAP 2023)
+# 6.S097 -- Ultrafast Photonics (IAP 2025)
 
-This is the course website for 2024 IAP course 6.S097 -- Ultrafast Photonics.  
+This is the course website for 2025 IAP course 6.S097 -- Ultrafast Photonics.  
 
-## Instructor
+## Instructors
 
 Donnie Keathley <br>
 Office: 36-285 <br>
 Email: pdkeat2@mit.edu
+
+Felix Ritzkowsky <br>
+Office: 36-227 <br>
+Email: fritzkow@mit.edu
+
+Adina Bechhofer <br>
+Office: 36-231 <br>
+Email: adinabec@mit.edu
 
 ## Course Description
 
