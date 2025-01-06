@@ -55,9 +55,17 @@ The course is structured into five chapters the content of which will be present
     - (further details TBD)
 	
 
-## Reading Materials and Reference
+## Course Materials
 
-This course will largely pull from the [Ultrafast Optics text from Franz Kaertner](https://drive.google.com/file/d/1LIFzv88v01RSK6lNyIiJCTH1AmmgMbHD/view?usp=sharing).  In table {numref}`tbl-reading-material`, particular reading material of interest is highlighted for each chapter.
+The course is set up so that it should be self-contained -- that is, you should be able to use the uploaded notes, course website, and lectures together to understand all of the materials (of course being active to ask questions).  
+
+Course materials can be found in [this Google Drive folder](https://drive.google.com/drive/folders/1PLPXFHaRfZv0kEO8l_J4AB7U0dIZcLFk?usp=share_link).  There you will find archived content from last years course (also joint with UC Davis) for now.  Any updates to this content will be replaced (e.g. updated recordings, lecture notes, etc.) if necessary due to changes this year.  
+
+In the shared drive space, you will also find lecture recordings and notes for the UC Davis offering of Ultrafast Photonics.  We are not able to offer these courses concurrently as we move at an accelerated pace at MIT.  However, we encourage communication between the two courses.  To facilitate this a joint Slack channel will be created.  
+
+## Other Reading Materials and Reference
+
+A good reference from this course is the [Ultrafast Optics text from Franz Kaertner](https://drive.google.com/file/d/1LIFzv88v01RSK6lNyIiJCTH1AmmgMbHD/view?usp=sharing).  In table {numref}`tbl-reading-material`, particular reading material of interest is highlighted for each chapter.
 
 ```{table} Course reading material.
 :name: tbl-reading-material
@@ -80,12 +88,6 @@ Another excellent book you can use to compliment this material is [Andrew Weiner
 There will be three problem sets.  
 
 The problem sets will be uploaded here as the course progresses.  Submission and grading will be through the course [Canvas Page](https://canvas.mit.edu/courses/24085).  
-
-## Course Materials
-
-Course materials can be found in [this Google Drive folder](https://drive.google.com/drive/folders/1PLPXFHaRfZv0kEO8l_J4AB7U0dIZcLFk?usp=share_link).  There you will find archived content from last years course (also joint with UC Davis) for now.  Any updates to this content will be replaced (e.g. updated recordings, lecture notes, etc.) if necessary due to changes this year.  
-
-In the shared drive space, you will also find lecture recordings and notes for the UC Davis offering of Ultrafast Photonics.  We are not able to offer these courses concurrently as we move at an accelerated pace at MIT.  However, we encourage communication between the two courses.  To facilitate this a joint Slack channel will be created.  
 
 ## Course Credit
 
