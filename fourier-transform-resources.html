@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6.S097 – Ultrafast Photonics (IAP 2025) &#8212; 6.S097 Ultrafast Photonics (IAP 2023)</title>
+    <title>Resources for those new to Fourier Transforms &#8212; 6.S097 Ultrafast Photonics (IAP 2023)</title>
   
   
   
@@ -62,10 +62,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'fourier-transform-resources';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Chapter 1 – Introduction" href="chapter-1.html" />
+    <link rel="prev" title="Chapter 5 – Dispersion Management and Pulse Characterization" href="chapter-5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -140,7 +142,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -159,8 +161,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     6.S097 – Ultrafast Photonics (IAP 2025)
                 </a>
             </li>
@@ -174,8 +176,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="chapter-5.html">Chapter 5 – Dispersion Management and Pulse Characterization</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="fourier-transform-resources.html">Resources for those new to Fourier Transforms</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Resources for those new to Fourier Transforms</a></li>
 </ul>
 
     </div>
@@ -247,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics/issues/new?title=Issue%20on%20page%20%2Ffourier-transform-resources.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -277,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/fourier-transform-resources.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -359,7 +361,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>6.S097 – Ultrafast Photonics (IAP 2025)</h1>
+    <h1>Resources for those new to Fourier Transforms</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -369,22 +371,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.S097 – Ultrafast Photonics (IAP 2025)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructors">Instructors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-description">Course Description</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-structure-and-topics-covered">Course Structure and Topics Covered</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-materials">Course Materials</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-reading-materials-and-reference">Other Reading Materials and Reference</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-sets">Problem Sets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-credit">Course Credit</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errors-and-corrections">Errors and Corrections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-fourier-series">Connection to Fourier Series</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-fourier-transform-pairs">Table of Fourier Transform Pairs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-online-resources">Other Online Resources</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a><ul class="visible nav section-nav flex-column">
-</ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -395,151 +385,27 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="s097-ultrafast-photonics-iap-2025">
-<h1>6.S097 – Ultrafast Photonics (IAP 2025)<a class="headerlink" href="#s097-ultrafast-photonics-iap-2025" title="Permalink to this heading">#</a></h1>
-<p>This is the course website for 2025 IAP course 6.S097 – Ultrafast Photonics.</p>
-<section id="instructors">
-<h2>Instructors<a class="headerlink" href="#instructors" title="Permalink to this heading">#</a></h2>
-<p>Donnie Keathley <br>
-Office: 36-285 <br>
-Email: <a class="reference external" href="mailto:pdkeat2&#37;&#52;&#48;mit&#46;edu">pdkeat2<span>&#64;</span>mit<span>&#46;</span>edu</a></p>
-<p>Felix Ritzkowsky <br>
-Office: 36-227 <br>
-Email: <a class="reference external" href="mailto:fritzkow&#37;&#52;&#48;mit&#46;edu">fritzkow<span>&#64;</span>mit<span>&#46;</span>edu</a></p>
-<p>Adina Bechhofer <br>
-Office: 36-231 <br>
-Email: <a class="reference external" href="mailto:adinabec&#37;&#52;&#48;mit&#46;edu">adinabec<span>&#64;</span>mit<span>&#46;</span>edu</a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="resources-for-those-new-to-fourier-transforms">
+<h1>Resources for those new to Fourier Transforms<a class="headerlink" href="#resources-for-those-new-to-fourier-transforms" title="Permalink to this heading">#</a></h1>
+<p>We realize that some of you may have had limited exposure to Fourier Transforms.  We use the Fourier Transform as a tool to move back and forth between timme and frequency representations of optical waveforms as some problems are much easier to solve in the frequency domain.</p>
+<p>Unfortunately we do not have the time to cover Fourier Transforms in detail.  The lectures try to touch on what is needed to be understood to understand the physics discussed.  To dive deeper, we have collected some resources and notes that might be helpful for those that have more limited experience and want to dive a bit deeper.</p>
+<section id="connection-to-fourier-series">
+<h2>Connection to Fourier Series<a class="headerlink" href="#connection-to-fourier-series" title="Permalink to this heading">#</a></h2>
+<p>If you have been introduced to Fourier Series then there is an easy way to conceptualize the Fourier Transform.  Fourier Series are used to represent periodic functions as a series of sinusoidal waves having frequencies that are integer multiples of the period.  A Fourier Transform is in essence an extension of the Fourier Series in the limit where the period goes to infinity leading to a continuous distribution of frequency components.  Try to see this connection yourself by taking the expression for the Fourier Series and comparing it to the expression for the Fourier Transform letting the period <span class="math notranslate nohighlight">\(T\)</span> go to <span class="math notranslate nohighlight">\(\infty\)</span>.</p>
 </section>
-<section id="course-description">
-<h2>Course Description<a class="headerlink" href="#course-description" title="Permalink to this heading">#</a></h2>
-<p>Knowledge of the fundamentals of ultrafast photonics is becoming increasingly valuable as ultrafast optical sources become more ubiquitous with an ever-growing number of applications. Relatively compact ultrafast optical sources with pulse durations ranging from nanoseconds down to femtoseconds are now commercially available across a broad range of wavelengths. Current applications are wide-ranging and include biological imaging, quantum optical technologies, chemical sensing, and precision measurements of time and distance among many others.</p>
-<p>During this IAP course, we will cover the essentials of ultrafast photonics. Topics will include: (1) the science of ultrafast laser pulses and their interaction with matter; (2) the technology to generate and manipulate ultrafast pulses of light; and (3) an overview of select applications of ultrafast photonics systems. This course will serve as a foundation for those interested in experimental and/or theoretical work involving ultrafast optical systems. Some basic knowledge of Fourier analysis, differential equations, and electromagnetic waves is assumed.</p>
-<p>This course is designed to overlap and coordinate with an ultrafast photonics course taught by Prof. William Putnam at U.C. Davis. Dr. Keathley will lead the lectures and course at MIT, with online material, such as lecture recordings and notes, being shared between MIT and UC Davis.</p>
+<section id="table-of-fourier-transform-pairs">
+<h2>Table of Fourier Transform Pairs<a class="headerlink" href="#table-of-fourier-transform-pairs" title="Permalink to this heading">#</a></h2>
+<p>Here is a link to a <a class="reference external" href="https://ethz.ch/content/dam/ethz/special-interest/baug/ibk/structural-mechanics-dam/education/identmeth/fourier.pdf">useful table of Fourier Transform pairs</a> that uses the same convention we use in this class.  We use many of these properties to gain intuition about the time and frequency domain representations.  Have a copy of this handy when working problems as it can be very helpful.</p>
 </section>
-<section id="course-structure-and-topics-covered">
-<h2>Course Structure and Topics Covered<a class="headerlink" href="#course-structure-and-topics-covered" title="Permalink to this heading">#</a></h2>
-<p>The course is structured into five chapters the content of which will be presented over eight lectures. The chapters and lectures will be organized as follows.</p>
+<section id="other-online-resources">
+<h2>Other Online Resources<a class="headerlink" href="#other-online-resources" title="Permalink to this heading">#</a></h2>
+<p>There are of course many online resources you can find through a simple search.  We have collated a few here:</p>
 <ul class="simple">
-<li><p><strong>Chapter 1 (Lecture 1.1):</strong>  Introduction</p>
-<ul>
-<li><p>Introduction to the course</p></li>
-<li><p>Notation</p></li>
-<li><p>Quantifying ultrafast pulses</p></li>
-<li><p>Time-frequency relations</p></li>
-<li><p>Core principles of ultrafast pulse formation</p></li>
+<li><p><a class="reference external" href="https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/">An Interactive Guide to the Fourier Transform</a></p></li>
+<li><p><a class="reference external" href="https://youtu.be/spUNpyF58BY?si=lZQl_uvDBlUDGhm0">Visual Introduction to Fourier Transforms (3Blue1Brown)</a></p></li>
 </ul>
-</li>
-<li><p><strong>Chapter 2 (Lectures 1.2 and 2):</strong> Pulse Interaction with Linear Media</p>
-<ul>
-<li><p>Reflection and transmission elements</p></li>
-<li><p>Cavities</p></li>
-<li><p>Propagation in dispersive media (pulse stretching and compression)</p></li>
-</ul>
-</li>
-<li><p><strong>Chapter 3 (Lectures 3 and 4):</strong> Nonlinear Pulse Propagation</p>
-<ul>
-<li><p>Self-phase modulation</p></li>
-<li><p>Soliton formation</p></li>
-<li><p>Supercontinuum generation</p></li>
-<li><p>Modeling a nonlinear photonic switch</p></li>
-</ul>
-</li>
-<li><p><strong>Chapter 4 (Lecture 5):</strong> Modelocking (Active and Passive)</p></li>
-<li><p><strong>Chapter 5 (Lectures 6 and 7):</strong> Dispersion Management and Pulse Characterization</p>
-<ul>
-<li><p>Pulse compression schemes</p></li>
-<li><p>Autocorrelation</p></li>
-<li><p>Phase characterization</p></li>
-<li><p>EO sampling</p></li>
-</ul>
-</li>
-<li><p><strong>Chapter 6 (Lecture 8):</strong> Breaking the Femtosecond Barrier</p>
-<ul>
-<li><p>Attosecond science</p></li>
-<li><p>Field-resolved metrology</p></li>
-<li><p>(further details TBD)</p></li>
-</ul>
-</li>
-</ul>
+<p><strong>Did you find a particular good resource?  Please share it with us and we will add it here!</strong></p>
 </section>
-<section id="course-materials">
-<h2>Course Materials<a class="headerlink" href="#course-materials" title="Permalink to this heading">#</a></h2>
-<p>The course is set up so that it should be self-contained – that is, you should be able to use the uploaded notes, course website, and lectures together to understand all of the materials (of course being active to ask questions).</p>
-<p>Course materials can be found in <a class="reference external" href="https://drive.google.com/drive/folders/1PLPXFHaRfZv0kEO8l_J4AB7U0dIZcLFk?usp=share_link">this Google Drive folder</a>.  There you will find archived content from last years course (also joint with UC Davis) for now.  Any updates to this content will be replaced (e.g. updated recordings, lecture notes, etc.) if necessary due to changes this year.</p>
-<p>In the shared drive space, you will also find lecture recordings and notes for the UC Davis offering of Ultrafast Photonics.  We are not able to offer these courses concurrently as we move at an accelerated pace at MIT.  However, we encourage communication between the two courses.</p>
-</section>
-<section id="other-reading-materials-and-reference">
-<h2>Other Reading Materials and Reference<a class="headerlink" href="#other-reading-materials-and-reference" title="Permalink to this heading">#</a></h2>
-<p>A good reference from this course is the <a class="reference external" href="https://drive.google.com/file/d/1LIFzv88v01RSK6lNyIiJCTH1AmmgMbHD/view?usp=sharing">Ultrafast Optics text from Franz Kaertner</a>.  In table <a class="reference internal" href="#tbl-reading-material"><span class="std std-numref">Table 1</span></a>, particular reading material of interest is highlighted for each chapter.</p>
-<table class="colwidths-auto table" id="tbl-reading-material">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Course reading material.</span><a class="headerlink" href="#tbl-reading-material" title="Permalink to this table">#</a></caption>
-<thead>
-<tr class="row-odd"><th class="head"><p>Course Chapter</p></th>
-<th class="head"><p>Lecture Nos.</p></th>
-<th class="head"><p>Textbook Reading Material</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>1.1</p></td>
-<td><p>Chs. 1 (1.1) &amp; 2 (2.6)</p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p>1.2,2</p></td>
-<td><p>Ch. 2 (2.6)</p></td>
-</tr>
-<tr class="row-even"><td><p>3</p></td>
-<td><p>3,4</p></td>
-<td><p>Ch. 3</p></td>
-</tr>
-<tr class="row-odd"><td><p>4</p></td>
-<td><p>5</p></td>
-<td><p>Chs. 5 &amp; 6</p></td>
-</tr>
-<tr class="row-even"><td><p>5</p></td>
-<td><p>6,7</p></td>
-<td><p>Chs. 3 (3.7) &amp; 10</p></td>
-</tr>
-<tr class="row-odd"><td><p>6</p></td>
-<td><p>8</p></td>
-<td><p>Notes Provided</p></td>
-</tr>
-</tbody>
-</table>
-<p>Another excellent book you can use to compliment this material is <a class="reference external" href="https://mit.primo.exlibrisgroup.com/discovery/fulldisplay?context=L&amp;docid=alma990016692990106761&amp;lang=en&amp;search_scope=all&amp;tab=all&amp;vid=01MIT_INST:MIT">Andrew Weiner’s Ultrafast Optics textbook</a>. (The link is to the MIT library page which provides access to a digital version).</p>
-</section>
-<section id="problem-sets">
-<h2>Problem Sets<a class="headerlink" href="#problem-sets" title="Permalink to this heading">#</a></h2>
-<p>There will be three problem sets.</p>
-<p>The problem sets will be uploaded here as the course progresses.  Submission and grading will be through the course <a class="reference external" href="https://canvas.mit.edu/courses/24085">Canvas Page</a>.</p>
-</section>
-<section id="course-credit">
-<h2>Course Credit<a class="headerlink" href="#course-credit" title="Permalink to this heading">#</a></h2>
-<p>This course will be for credit as P/D/F.  A passing grade will be determined from course participation and problem sets.  A passing student should show sufficient engagement with the material.</p>
-</section>
-<section id="errors-and-corrections">
-<h2>Errors and Corrections<a class="headerlink" href="#errors-and-corrections" title="Permalink to this heading">#</a></h2>
-<p>See an error?  Please file a bug report on the <a class="reference external" href="https://github.com/dkeathley/JPyBook-6.S097-IAP-Ultrafast-Photonics-Text">Github page</a>.</p>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="table-of-contents">
-<h1>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="chapter-1.html">Chapter 1 – Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter-2.html">Chapter 2 – Pulse Interactions with Linear Media</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter-3.html">Chapter 3 – Nonlinear Pulse Propagation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter-4.html">Chapter 4 – Mode-Locking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter-5.html">Chapter 5 – Dispersion Management and Pulse Characterization</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="fourier-transform-resources.html">Resources for those new to Fourier Transforms</a></li>
-</ul>
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -572,14 +438,14 @@ Email: <a class="reference external" href="mailto:adinabec&#37;&#52;&#48;mit&#46
                 <footer class="prev-next-footer">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="right-next"
-       href="chapter-1.html"
-       title="next page">
+    <a class="left-prev"
+       href="chapter-5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Chapter 1 – Introduction</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter 5 – Dispersion Management and Pulse Characterization</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -596,22 +462,10 @@ Email: <a class="reference external" href="mailto:adinabec&#37;&#52;&#48;mit&#46
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">6.S097 – Ultrafast Photonics (IAP 2025)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructors">Instructors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-description">Course Description</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-structure-and-topics-covered">Course Structure and Topics Covered</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-materials">Course Materials</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-reading-materials-and-reference">Other Reading Materials and Reference</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-sets">Problem Sets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-credit">Course Credit</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errors-and-corrections">Errors and Corrections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-fourier-series">Connection to Fourier Series</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-fourier-transform-pairs">Table of Fourier Transform Pairs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-online-resources">Other Online Resources</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a><ul class="visible nav section-nav flex-column">
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
