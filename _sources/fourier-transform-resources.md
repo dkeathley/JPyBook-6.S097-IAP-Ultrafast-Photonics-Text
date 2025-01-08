@@ -1,4 +1,4 @@
-# Resources for those new to Fourier Transforms
+# Fourier Transforms
 
 We realize that some of you may have had limited exposure to Fourier Transforms.  We use the Fourier Transform as a tool to move back and forth between timme and frequency representations of optical waveforms as some problems are much easier to solve in the frequency domain.  
 
