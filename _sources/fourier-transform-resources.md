@@ -6,7 +6,7 @@ Unfortunately we do not have the time to cover Fourier Transforms in detail.  Th
 
 ## Connection to Fourier Series
 
-If you have been introduced to Fourier Series then there is an easy way to conceptualize the Fourier Transform.  Fourier Series are used to represent periodic functions as a series of sinusoidal waves having frequencies that are integer multiples of the period.  A Fourier Transform is in essence an extension of the Fourier Series in the limit where the period goes to infinity leading to a continuous distribution of frequency components.  Try to see this connection yourself by taking the expression for the Fourier Series and comparing it to the expression for the Fourier Transform letting the period $T$ go to $\infty$.  
+If you have been introduced to Fourier Series then there is an easy way to conceptualize the Fourier Transform.  Fourier Series are used to represent periodic functions having period $T$ as a series of sinusoidal waves having frequencies that are integer multiples of the fundamental freuqency $1/T$.  A Fourier Transform is in essence an extension of the Fourier Series in the limit where the period goes to infinity leading to a continuous distribution of frequency components.  Try to see this connection yourself by taking the expression for the Fourier Series and comparing it to the expression for the Fourier Transform letting the period $T$ go to $\infty$.  
 
 ## Table of Fourier Transform Pairs
 
