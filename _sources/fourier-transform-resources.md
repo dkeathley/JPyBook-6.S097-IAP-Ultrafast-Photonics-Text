@@ -1,8 +1,8 @@
 # Fourier Transforms
 
-We realize that some of you may have had limited exposure to Fourier Transforms.  We use the Fourier Transform as a tool to move back and forth between timme and frequency representations of optical waveforms as some problems are much easier to solve in the frequency domain.  
+We realize that some of you may have had limited exposure to Fourier Transforms.  We use the Fourier Transform as a tool to move back and forth between time and frequency representations of optical waveforms as some problems are much easier to conceptualize and solve in the frequency domain. Some problems we encounter will even require us to continuously move back and forth between time and frequency to understand them.   
 
-Unfortunately we do not have the time to cover Fourier Transforms in detail.  The lectures try to touch on what is needed to be understood to understand the physics discussed.  To dive deeper, we have collected some resources and notes that might be helpful for those that have more limited experience and want to dive a bit deeper. 
+Unfortunately we do not have the time to cover Fourier Transforms in detail.  The lectures try to touch on what is needed to understand the physics discussed.  To dive deeper, we have collected some resources and notes that might be helpful for those that have more limited experience and want to dive a bit deeper. 
 
 ## Connection to Fourier Series
 
