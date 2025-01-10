@@ -638,14 +638,17 @@ document.write(`
 <li><p>What is the impact of the power reflectivity R on the pass-band response?  Why?</p></li>
 <li><p>How might the Fabry-Perot cavity be leveraged for dispersion compensation?</p></li>
 </ul>
-<div class="cell tag_hide_input docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Code -- </span>
 <span class="c1">#See lecture notes for definitions here...</span>
 <span class="n">k</span> <span class="o">=</span> <span class="p">(</span><span class="n">w</span> <span class="o">+</span> <span class="n">wc</span><span class="p">)</span><span class="o">*</span><span class="mf">1e15</span><span class="o">*</span><span class="mf">1e-6</span><span class="o">/</span><span class="n">c</span> <span class="c1">#Be careful of units here!</span>
+                        <span class="c1">#Assuming units of rad/micron so we can use lengths of micron below</span>
 
 
 <span class="k">def</span> <span class="nf">H_calc</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
+    <span class="c1">#R is power reflectivity (percent)</span>
+    <span class="c1">#L is length of cavity spacing in microns</span>
     
     <span class="n">T</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">R</span>
     <span class="n">phi</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">L</span>
@@ -708,7 +711,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "1340b38048004976b0fa6a8e5f5904b1", "version_major": 2, "version_minor": 0}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.update(R, L)&gt;
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "0a2187e263614421a2e92085e38f2a3e", "version_major": 2, "version_minor": 0}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.update(R, L)&gt;
 </pre></div>
 </div>
 </div>
@@ -776,7 +779,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "f3f04d32d9264ff88d2dc80376a76c1b", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "27c57bff713046619d6595e969767db0", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </section>
 <section id="id2">
@@ -883,7 +886,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "c8c3d431db6647ab9c2cf4f7e9add85d", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "304539a5d4704b92950ef88c7acea2dc", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </section>
 <section id="real-material-dispersion">
@@ -1014,7 +1017,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "82a9070a18b64e6eb195198355a379e9", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "bbd181d8ea5d47f8b71c4943e561829b", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </section>
 </section>
@@ -1108,7 +1111,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "96edb04143e64d78bc71cbad62eb5739", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "936b086487954949a3551443326de5d6", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </section>
 </section>
