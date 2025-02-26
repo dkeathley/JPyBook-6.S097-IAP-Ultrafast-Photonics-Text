@@ -12,6 +12,7 @@ parts:
    - file: chapter-3
    - file: chapter-4
    - file: chapter-5
+   - file: mode_addition
  - caption: Resources
    chapters:
    - file: fourier-transform-resources
