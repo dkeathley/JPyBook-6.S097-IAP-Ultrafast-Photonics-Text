@@ -15,6 +15,9 @@ DATA/
 # Archived Website Releases
 ARCHIVE/
 
+#Prep and Staging
+STAGING/
+
 # H5 and mat files
 *.mat
 
