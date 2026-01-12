@@ -1,0 +1,30 @@
+version: 1
+project:
+  title: 6.S097 Ultrafast Photonics (IAP 2023)
+  authors:
+    - name: P. Donald Keathley
+    - name: William P. Putnam
+  github: dkeathley/JPyBook-6.S097-IAP2023-Ultrafast-Photonics
+  bibliography:
+    - references.bib
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/book.pdf
+  toc:
+    - file: intro.md
+    - title: Chapters
+      children:
+        - file: chapter-1.ipynb
+        - file: chapter-2.ipynb
+        - file: chapter-3.ipynb
+        - file: chapter-4.ipynb
+        - file: chapter-5.ipynb
+    - title: Resources
+      children:
+        - file: fourier-transform-resources.md
+site:
+  options:
+    logo: logo.png
+    folders: true
+  template: book-theme

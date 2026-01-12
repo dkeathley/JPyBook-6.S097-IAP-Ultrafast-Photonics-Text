@@ -152,3 +152,6 @@ dmypy.json
 
 #Jupyterlab stuff
 .jupyter/
+
+# MyST build outputs
+_build
